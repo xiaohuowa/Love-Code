@@ -65,10 +65,19 @@
 
   </div>
 
+<<<<<<< HEAD
   <audio preload="auto" id="media" src="best2u.mp3" preload loop="loop"></audio>
   <!-- <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio> -->
 
   <script>
+=======
+  <audio preload="auto" autoplay="" id="media" src="best2u.mp3" autoplay preload loop="loop"></audio>
+  <!-- <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio> -->
+
+  <script>
+    document.getElementById('media').play();
+    console.log(123);
+>>>>>>> 310f34d81d19a4462caf4f20af4d15d7e90641e4
     (function () {
       var canvas = $('#canvas');
 
@@ -125,8 +134,11 @@
       var hold = 1;
 
       canvas.click(function (e) {
+<<<<<<< HEAD
         console.log("点击了！！！开始播放！");
         document.getElementById('media').play();
+=======
+>>>>>>> 310f34d81d19a4462caf4f20af4d15d7e90641e4
         var offset = canvas.offset(), x, y;
         x = e.pageX - offset.left;
         y = e.pageY - offset.top;
