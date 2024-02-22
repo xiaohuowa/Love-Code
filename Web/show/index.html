@@ -21,9 +21,9 @@
 </head>
 
 <body>
+	<audio preload="auto" id="media" src="../best2u.mp3" preload loop="loop"></audio>
 	<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
 	<!-- <embed src="../best2u.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
-	<audio preload="auto" id="media" src="../best2u.mp3" preload loop="loop"></audio>
 
 
 	<div id="mainDiv">
@@ -70,6 +70,17 @@
 	</div>
 
 	<script type="text/javascript">
+
+		setInterval("toggleSound()",1);
+
+		function toggleSound() {
+			var music = document.getElementById("media");//获取ID  
+			if (music.paused) { //判读是否播放  
+				music.paused=false;
+				music.play(); //没有就播放 
+			}    
+		}
+
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date('2023.09.17');
@@ -84,8 +95,8 @@
 			$("#copyright").css("bottom", "10px");
 			document.execCommand("stop");
 		} else {
-			document.getElementById('media').play();
-			console.log('start play!');
+			// document.getElementById('media').play();
+			// console.log('start play!');
 			setTimeout(function () {
 				startHeartAnimation();
 			}, 5000);
